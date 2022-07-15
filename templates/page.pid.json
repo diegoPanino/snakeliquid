@@ -1,8 +1,12 @@
 {
-    "sections":{
-        "main":{
-            "type": "description-banner"
-        }
-    },
-    "order":["main"]
+  "sections": {
+    "main": {
+      "type": "description-banner",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
