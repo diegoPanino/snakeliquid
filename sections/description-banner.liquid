@@ -1,6 +1,37 @@
-<h1>Description Banner</h1>
+<section class="description-banner">
+    <img class="img-fluid" src="{{ section.settings.img_banner | img_url: 'master' }}" />
+    <div class="description-txt-container text-white">
+        <h2>{{ section.settings.h1_banner }}</h2>
+        <p class="txt-big">
+            {{ section.settings.p_banner }}
+        </p>
+        <a href="#acquista" class="btn bg-primary">{{ section.settings.btn_banner }}</a>
+    </div>
+</section>
 {% schema %}
 {
-    "name": "Description Banner"
+    "name": "Description Banner",
+    "settings":[
+        {
+            "type":"image_picker",
+            "id":"img_banner",
+            "label":"Immagine di sfondo del banner"
+        },
+        {
+            "type":"text",
+            "id":"h1_banner",
+            "label":"Testo titolo"
+        },
+        {
+            "type":"text",
+            "id":"p_banner",
+            "label":"Testo paragro - sottotitolo"
+        },
+        {
+            "type":"text",
+            "id":"btn_banner",
+            "label":"Testo pulsante"
+        }
+    ]
 }
 {% endschema %}
