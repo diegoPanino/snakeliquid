@@ -194,6 +194,7 @@
       }
     {% endstyle %}
 
+    {{ 'custom.min.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
@@ -269,4 +270,5 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
+      <script src="{{ 'vendor.bundle.min.js' | asset_url }}" defer="defer"></script>
 </html>

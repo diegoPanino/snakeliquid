@@ -1,0 +1,96 @@
+// 00. Reset
+a{
+    text-decoration: none;
+    color:$black;
+}
+ul,ol{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+html,body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+input{
+    outline:none;
+}
+// 00. Mixins
+@mixin overlay{
+    content:'';
+    position:absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 40%, rgba(255,255,255,0.1) 100%);
+    z-index:1;
+}
+// 00. Utility
+.z-1{
+    z-index:1;
+}
+.z-2{
+    z-index: 2;
+}
+.z-0{
+    z-index: -1;
+}
+// 00. Layout
+// Text on the left with outline button 
+.txt-btn{
+    padding:0 1rem;
+    .txt-clm{
+        text-align: center;
+    }
+    @include media-breakpoint-up(md){
+        display:flex;
+        gap:3rem;
+        .txt-clm{
+            padding-left: 5rem;;
+            flex:1;
+            text-align: start;
+        }
+        .btn-clm{
+            flex:2;
+            text-align: start;
+        }
+    }
+}
+// Text in the middle of the page
+.txt-centered{
+    text-align: center;
+    @include media-breakpoint-up(md){
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+// Wrap 2 elements per row on mobile
+.wrap-by-two-mobile{
+    @include media-breakpoint-down(md){
+        flex:40%;
+    }
+}
+// Wrap element on the left of the page and align text on start
+.txt-half-left{
+    width: 40%!important;
+    margin-right:auto!important;
+    margin-left:0!important;
+    text-align: start!important;
+}
+
+// 00.Animation
+
+@keyframes bouncing-scale-x{
+    0%,100%,40%,80%{
+        transform: scaleX(1.08);
+    }
+    20%{
+        transform:scaleX(1.1);
+    }
+    60%{
+        transform: scaleX(1.09);
+    }
+}

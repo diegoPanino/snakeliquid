@@ -1,0 +1,36 @@
+.btn {
+    border-radius: $btn-border-radius;
+    color:$white;
+    font-family: 'Syne', sans-serif;
+    font-style:normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height:18px;
+    text-align: center;
+    padding-top:0.75rem;
+    padding-bottom: 0.75rem;
+    &.btn-primary {
+        background: linear-gradient($primary, $primary-variant);
+    }
+    &.btn-secondary {
+        background: linear-gradient($secondary, $secondary-variant);
+    }
+    &.btn-sm{
+        max-width: 160px;
+    }
+    &.btn-lg{
+        width:270px;
+        padding-top: 1.25rem;
+        padding-bottom:1.25rem;
+        @include media-breakpoint-up(md){
+            padding-top:0.75rem;
+            padding-bottom:0.75rem;
+        }
+    }
+}
+.bg-primary{
+    background: linear-gradient($primary, $primary-variant);
+}
+.bg-secondary{
+    background: linear-gradient($secondary, $secondary-variant);
+}
