@@ -1,0 +1,10 @@
+{
+  "name": "snakeliquid",
+  "version": "1.0.0",
+  "description": "Liquid Playground",
+  "main": "index.js",
+  "repository": "config",
+  "author": "diegoPanino",
+  "license": "MIT",
+  "private": true
+}
