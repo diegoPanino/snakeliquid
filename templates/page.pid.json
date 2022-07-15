@@ -1,13 +1,16 @@
 {
   "name":"Pronto Intervento Service",
   "sections": {
-    "main": {
-      "type": "description-banner",
-      "settings": {
-      }
+		"main": {
+			"type": "main-page",
+			"settings": { "padding_top": 36, "padding_bottom": 36 }
+		},
+    "hero-card":{
+      "type":"description-banner"
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero-card"
   ]
 }
