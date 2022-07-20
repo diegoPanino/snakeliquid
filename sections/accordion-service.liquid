@@ -1,0 +1,85 @@
+<section class="py-5 accordion-row-2 d-md-flex">
+  <div class = "txt-clm txt-centered">
+    <p class="text-primary txt-big">
+      {{ section.settings.ico-txt }}
+    </p>
+    <h2 class="pb-5">
+        {{ section.settings.main-title }}
+    </h2>
+    <p class="txt-big pb-5">
+        {{ section.settings.paragraph }}
+    </p>
+    <div class="accordion accordion-outline btn-clm" id="{{ block.settings.accordion-name }}">
+        {% for block in section.blocks %}
+          {% if block.type == "accordion-block" %}
+            <div class="accordion-item ">
+              <h5 id="{{ block.settings.accordion-name }}Head{{ block.id }}" class="accordion-header">
+                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#{{ block.settings.accordion-name }}Body{{ block.id }}" aria-expanded="true" aria-controls="{{ block.settings.accordion-name }}Body{{ block.id }}">
+                      {{ block.settings.button}}
+                  </button>
+              </h5>
+              <div id="{{ block.settings.accordion-name }}Body{{ block.id }}" class="accordion-collapse collapse" data-bs-parent="#{{ block.settings.accordion-name }}" aria-labelledby="{{ block.settings.accordion-name }}Head{{ block.id }}">
+                  <div class="accordion-body">
+                      <p class="txt-regular">
+                          {{ block.settings.body}}
+                      </p>
+                  </div>
+              </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+    </div>       
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Accordion Service",
+    "settings": [
+      {
+        "id":"ico-txt",
+        "type":"text",
+        "label":"Pre Titolo con icona"
+      },
+      {
+        "id":"main-title",
+        "type":"text",
+        "label":"Titolo Descrizione"
+      },
+      {
+        "id":"paragraph",
+        "type":"text",
+        "label":"Descrizione"
+      }
+    ],
+    "blocks":[
+      {
+        "name":"Bottone a comparsa",
+        "type":"accordion-block",
+        "settings":[
+          {
+            "id":"accordion-name",
+            "type":"text",
+            "label":"Nome Bottone",
+            "info":"Non verrà visualizzato, solo per funzionamento interno"
+          },
+          {
+            "id":"button",
+            "type":"text",
+            "label":"Testo Bottone"
+          },
+          {
+            "id":"body",
+            "type":"text",
+            "label":"Corpo della descrizione a comparsa"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

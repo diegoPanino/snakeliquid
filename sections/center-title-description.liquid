@@ -1,0 +1,26 @@
+<div>
+    <h1>Center Title Description</h1>
+    <div class = "container-xxl my-4 txt-centered">
+          <h2>{{ section.settings.main-title }}</h2>
+          <p class="py-3 txt-big">
+              {{ section.settings.main-p }}
+          </p>
+      </div>
+</div>
+{% schema %}
+{
+    "name":"Descrizione Centrale",
+    "settings":[
+        {
+            "label":"Titolo",
+            "type":"text",
+            "id":"main-title"
+        },
+        {
+            "label":"Paragrafo",
+            "type":"text",
+            "id":"main-p"  
+        }
+    ]
+}
+{% endschema %}
