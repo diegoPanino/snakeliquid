@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "accordion-service",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
