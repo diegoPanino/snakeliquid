@@ -1,4 +1,5 @@
 {
+  "name":"Servizi",
   "sections": {
     "main": {
       "type": "main-page",
@@ -9,6 +10,26 @@
     },
     "accordion": {
       "type": "accordion-service",
+      "blocks": {
+        "e3fd263c-ac65-43db-b5ff-c4ef698d97e8": {
+          "type": "accordion-block",
+          "settings": {
+            "button": "Button 1",
+            "body": "Questo è il corpo del primo pulsante"
+          }
+        },
+        "9f982f9f-92c6-4bf8-b05a-23b7e8aa0f92": {
+          "type": "accordion-block",
+          "settings": {
+            "button": "Button 2",
+            "body": "odepocorpo corpo corpo corpo"
+          }
+        }
+      },
+      "block_order": [
+        "e3fd263c-ac65-43db-b5ff-c4ef698d97e8",
+        "9f982f9f-92c6-4bf8-b05a-23b7e8aa0f92"
+      ],
       "settings": {
         "ico-txt": "Cyber Awareness",
         "main-title": "",

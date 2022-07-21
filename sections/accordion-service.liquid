@@ -15,16 +15,16 @@
       {% if block.type == "accordion-block" %}
         <div class="accordion-item ">
           <h5 id="Head{{ block.id }}" class="accordion-header">
-            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Body{{ block.id }}" aria-expanded="true" aria-controls="Body{{ block.id }}">
-              {{ block.settings.button}}
-            </button>
+              <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Body{{ block.id }}" aria-expanded="true" aria-controls="Body{{ block.id }}">
+                  {{ block.settings.button}}
+              </button>
           </h5>
-          <div id="Body{{ block.id }}" class="accordion-collapse collapse" data-bs-parent="#{{ block.id }}" aria-labelledby="Head{{ block.id }}">
-            <div class="accordion-body">
-              <p class="txt-regular">
-                {{ block.settings.body}}
-              </p>
-            </div>
+          <div block.id="Body{{ block.id }}" class="accordion-collapse collapse" data-bs-parent="#{{ block.id }}" aria-labelledby="Head{{ block.id }}">
+              <div class="accordion-body">
+                  <p class="txt-regular">
+                      {{ block.settings.body}}
+                  </p>
+              </div>
           </div>
         </div>
       {% endif %}
