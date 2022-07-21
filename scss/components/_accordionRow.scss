@@ -1,0 +1,32 @@
+.accordion-outline{
+    .accordion-item{
+        background:transparent;
+        border:1px solid $black;
+        position:relative;
+        margin-bottom:1rem;
+        padding:0.5rem 0;
+        
+        .accordion-button{
+            position:static;
+        }
+        .accordion-button::after{
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0.75rem;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+        .accordion-button,
+        .accordion-body{
+            padding-left:3.5rem;
+        }
+        &:hover{
+            @include media-breakpoint-down(sm){
+            background:$white;
+            transform-origin: left;
+            animation: bouncing-scale-x 0.75s linear forwards;
+            }
+        }
+    }
+}
