@@ -23,19 +23,11 @@
             "button": "Button 2",
             "body": "odepocorpo corpo corpo corpo"
           }
-        },
-        "69a68d75-826b-49fc-b2af-8ab1e9e65bd0": {
-          "type": "accordion-block",
-          "settings": {
-            "button": "terzo bottone",
-            "body": "terzo bottone"
-          }
         }
       },
       "block_order": [
         "e3fd263c-ac65-43db-b5ff-c4ef698d97e8",
-        "9f982f9f-92c6-4bf8-b05a-23b7e8aa0f92",
-        "69a68d75-826b-49fc-b2af-8ab1e9e65bd0"
+        "9f982f9f-92c6-4bf8-b05a-23b7e8aa0f92"
       ],
       "settings": {
         "ico-txt": "Cyber Awareness",
