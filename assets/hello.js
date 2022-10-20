@@ -1,1 +1,3 @@
-console.log('This is page scoped');
+function hello() {
+    console.log('This is page scoped');
+}
